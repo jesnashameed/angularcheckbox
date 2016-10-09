@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+    <h1 ng-controller="firstController">{{message}}</h1>
+      <label>Name:</label>
+      <input type="text" ng-model="userName" placeholder="Enter a name here">
+<hr>
+      <h1>Hello {{userName}}!</h1>
+      <script type="text/javascript">
+          angular.module('app',[]).controller('firstController',
+          function($scope){
+              $scope.message = 'im the message from your first controller!'
+          }
+          })
+      </script>
+    </div>
+  </body>
+</html>
